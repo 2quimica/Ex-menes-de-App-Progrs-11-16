@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Examen Parcial (Progresiones 11–16) - La Energía en los Procesos de la Vida Diaria</title>
+  <style>
+    /* ==========================================================================
+       SISTEMA DE DISEÑO AUTÓNOMO OFFLINE (MOBILE FIRST - ANDROID & IPHONE)
+       Sin dependencias externas, sin CDN, alta legibilidad y contraste.
+       ========================================================================== */
+    :root {
+      --bg-app: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-cream: #fffef9;
+      --text-main: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border-subtle: #cbd5e1;
+      --border-light: #e2e8f0;
+
+      /* Paleta Verde Esmeralda Institucional */
+      --emerald-deep: #047857;
+      --emerald-main: #059669;
+      --emerald-bright: #10b981;
+      --emerald-soft: #d1fae5;
+      --emerald-tint: #ecfdf5;
+      --emerald-border: #6ee7b7;
+
+      /* Estados de apoyo */
+      --amber-bg: #fef3c7;
+      --amber-border: #f59e0b;
+      --amber-text: #92400e;
+      --danger-bg: #fee2e2;
+      --danger-border: #ef4444;
+      --danger-text: #991b1b;
+
+      --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.10);
+      --shadow-lg: 0 14px 32px rgba(4, 120, 87, 0.22);
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-app);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background-color 0.25s ease;
+    }
+
+    /* ==========================================================================
+       FONDO VERDE ESMERALDA INTENSO OBLIGATORIO PARA PANTALLA DE RESULTADOS
+       Reconocible inmediatamente en capturas de pantalla ("EL EXAMEN VERDE")
+       ========================================================================== */
+    body.results-green-mode {
+      background-color: #059669;
+      background-image: linear-gradient(155deg, #047857 0%, #059669 48%, #10b981 100%);
+    }
+
+    #app-content {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 14px;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Pie de página discreto */
+    .app-footer {
+      width: 100%;
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    body.results-green-mode .app-footer {
+      background-color: rgba(4, 120, 87, 0.35);
+      border-top-color: rgba(255, 255, 255, 0.25);
+      color: #ecfdf5;
+    }
+
+    /* ==========================================================================
+       TARJETAS Y COMPONENTES GENERALES
+       ========================================================================== */
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+    }
+
+    @media (min-width: 600px) {
+      #app-content {
+        padding: 24px 20px;
+      }
+      .card {
+        padding: 28px;
+      }
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background-color: var(--emerald-tint);
+      color: var(--emerald-deep);
+      border: 1px solid var(--emerald-border);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Pantalla de Bienvenida */
+    .welcome-header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .welcome-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-top: 10px;
+      line-height: 1.25;
+    }
+
+    @media (min-width: 600px) {
+      .welcome-title {
+        font-size: 1.65rem;
+      }
+    }
+
+    .welcome-subtitle {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--emerald-deep);
+      margin-top: 6px;
+    }
+
+    .info-box {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--emerald-main);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+    }
+
+    .info-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .info-box li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .info-dot {
+      color: var(--emerald-main);
+      font-weight: 900;
+    }
+
+    /* Formulario de Identificación */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 13px 14px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background-color: #ffffff;
+      border: 2px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: var(--emerald-main);
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.18);
+    }
+
+    /* Botones Táctiles Amplios */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      min-height: 48px;
+      transition: transform 0.12s ease, background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      text-align: center;
+      user-select: none;
+    }
+
+    .btn:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background-color: var(--emerald-main);
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(5, 150, 105, 0.30);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background-color: var(--emerald-deep);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--text-main);
+      border: 2px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background-color: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    .btn-submit-exam {
+      background-color: var(--emerald-deep);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(4, 120, 87, 0.28);
+    }
+
+    .btn-submit-exam:hover:not(:disabled) {
+      background-color: #065f46;
+    }
+
+    /* ==========================================================================
+       PANTALLA DE EVALUACIÓN (UNA PREGUNTA POR PANTALLA)
+       ========================================================================== */
+    .exam-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .exam-topbar {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .student-meta-line {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--emerald-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .question-counter-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .answered-pill {
+      background-color: var(--emerald-tint);
+      border: 1px solid var(--emerald-border);
+      color: var(--emerald-deep);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .question-text {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    @media (min-width: 600px) {
+      .question-text {
+        font-size: 1.12rem;
+      }
+    }
+
+    /* Contenedor de Esquema Visual SVG */
+    .svg-figure-box {
+      margin: 14px auto 4px auto;
+      padding: 10px;
+      background-color: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .svg-figure-box svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Opciones de Respuesta */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      background-color: #f8fafc;
+      border: 2px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 13px 14px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 54px;
+      transition: all 0.16s ease;
+    }
+
+    .option-btn:hover {
+      background-color: #f1f5f9;
+      border-color: #94a3b8;
+    }
+
+    .option-btn.selected {
+      background-color: var(--emerald-tint);
+      border-color: var(--emerald-main);
+      color: #064e3b;
+      font-weight: 700;
+      box-shadow: 0 3px 10px rgba(5, 150, 105, 0.15);
+    }
+
+    .option-radio {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #94a3b8;
+      background-color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.85rem;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .option-btn.selected .option-radio {
+      border-color: var(--emerald-main);
+      background-color: var(--emerald-main);
+    }
+
+    /* Barra de Navegación Anterior / Entregar / Siguiente */
+    .nav-actions-bar {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr 1fr;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 440px) {
+      .nav-actions-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-actions-bar .btn-submit-exam {
+        grid-column: 1 / -1;
+        order: -1;
+      }
+    }
+
+    /* Navegador Compacto 1..30 */
+    .navigator-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .navigator-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .navigator-label {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+    }
+
+    .navigator-legend {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 5px;
+    }
+
+    @media (max-width: 480px) {
+      .nav-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+      }
+    }
+
+    .nav-num-btn {
+      height: 36px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1.5px solid var(--border-subtle);
+      background-color: #ffffff;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.1s ease;
+    }
+
+    .nav-num-btn.answered {
+      background-color: var(--emerald-soft);
+      border-color: var(--emerald-main);
+      color: #064e3b;
+    }
+
+    .nav-num-btn.current {
+      background-color: var(--emerald-deep);
+      border-color: #064e3b;
+      color: #ffffff;
+      box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.45);
+      transform: scale(1.05);
+      font-weight: 900;
+    }
+
+    /* ==========================================================================
+       PANTALLA FINAL DE RESULTADOS ("EL EXAMEN VERDE" - COMPACTA PARA CAPTURA)
+       ========================================================================== */
+    .results-wrapper {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 6px 4px;
+    }
+
+    .emerald-evidence-card {
+      background-color: var(--bg-cream);
+      border: 3px solid #a7f3d0;
+      border-radius: 20px;
+      padding: 16px 18px;
+      box-shadow: 0 16px 36px rgba(6, 78, 59, 0.35);
+      color: var(--text-main);
+    }
+
+    .res-header {
+      text-align: center;
+      border-bottom: 2px solid var(--emerald-soft);
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .res-completed-badge {
+      display: inline-block;
+      background-color: var(--emerald-main);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+    }
+
+    .res-subject-title {
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: #064e3b;
+      margin-top: 6px;
+      line-height: 1.2;
+    }
+
+    .res-prog-subtitle {
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--emerald-deep);
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    /* Datos del Alumno */
+    .res-student-box {
+      background-color: var(--emerald-tint);
+      border: 1px solid var(--emerald-border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      font-size: 0.82rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .res-student-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .res-label {
+      font-weight: 800;
+      color: var(--emerald-deep);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+    }
+
+    .res-val {
+      font-weight: 800;
+      color: var(--text-main);
+      text-align: right;
+      word-break: break-word;
+    }
+
+    /* Bloque Central de Calificación */
+    .res-score-panel {
+      background-color: #ffffff;
+      border: 2px solid var(--emerald-main);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .res-score-metrics {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 10px;
+    }
+
+    .metric-block {
+      flex: 1;
+    }
+
+    .metric-title {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .metric-number {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: var(--emerald-deep);
+      line-height: 1.15;
+    }
+
+    .metric-divider {
+      width: 2px;
+      height: 36px;
+      background-color: var(--emerald-soft);
+    }
+
+    .performance-tag {
+      margin-top: 8px;
+      display: inline-block;
+      background-color: var(--emerald-soft);
+      color: #064e3b;
+      border: 1px solid var(--emerald-main);
+      font-size: 0.76rem;
+      font-weight: 900;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.03em;
+    }
+
+    /* Desglose Compacto P11–P16 */
+    .prog-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 10px;
+      background-color: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+    }
+
+    .prog-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .prog-item-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .prog-score-num {
+      color: var(--emerald-deep);
+    }
+
+    .prog-bar-track {
+      width: 100%;
+      height: 6px;
+      background-color: #e2e8f0;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .prog-bar-fill {
+      height: 100%;
+      background-color: var(--emerald-main);
+      border-radius: var(--radius-full);
+    }
+
+    /* Mayor Dominio y Conviene Repasar */
+    .res-highlights {
+      background-color: var(--emerald-tint);
+      border: 1px solid var(--emerald-border);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.76rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .highlight-row {
+      line-height: 1.35;
+      color: var(--text-main);
+    }
+
+    .highlight-strong {
+      font-weight: 800;
+      color: #064e3b;
+    }
+
+    /* Fecha y Hora */
+    .res-datetime {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      border-top: 1px dashed var(--border-subtle);
+      padding-top: 7px;
+    }
+
+    /* Aviso Prominente de Captura de Pantalla */
+    .screenshot-banner {
+      background-color: #fef3c7;
+      border: 2.5px solid #f59e0b;
+      color: #78350f;
+      border-radius: 14px;
+      padding: 11px 14px;
+      text-align: center;
+      font-size: 0.84rem;
+      font-weight: 900;
+      line-height: 1.35;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+    }
+
+    /* Botón Revisar Mis Respuestas */
+    .btn-review-toggle {
+      width: 100%;
+      background-color: #ffffff;
+      color: #064e3b;
+      border: 2px solid #a7f3d0;
+      font-weight: 900;
+      box-shadow: 0 6px 16px rgba(6, 78, 59, 0.22);
+    }
+
+    .btn-review-toggle:hover {
+      background-color: #ecfdf5;
+    }
+
+    /* Panel de Revisión Detallada */
+    .review-section {
+      background-color: var(--bg-cream);
+      border: 2px solid #a7f3d0;
+      border-radius: 18px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-section.hidden {
+      display: none;
+    }
+
+    .review-heading {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #064e3b;
+      border-bottom: 2px solid var(--emerald-soft);
+      padding-bottom: 8px;
+    }
+
+    .review-card {
+      background-color: #ffffff;
+      border: 1.5px solid var(--border-light);
+      border-left-width: 5px;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 0.84rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .review-card.is-correct {
+      border-left-color: var(--emerald-main);
+    }
+
+    .review-card.is-wrong {
+      border-left-color: #dc2626;
+    }
+
+    .review-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .status-ok {
+      color: var(--emerald-deep);
+    }
+
+    .status-bad {
+      color: #b91c1c;
+    }
+
+    .prog-chip {
+      background-color: #f1f5f9;
+      color: var(--text-secondary);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .review-q-text {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .review-detail-box {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .review-explanation {
+      color: #064e3b;
+      border-top: 1px solid var(--border-light);
+      padding-top: 5px;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       MODALES PERSONALIZADOS (SIN alert() NI confirm() DEL NAVEGADOR)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(15, 23, 42, 0.68);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 9999;
+    }
+
+    .modal-box {
+      background-color: #ffffff;
+      border-radius: 18px;
+      padding: 22px 20px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+      text-align: center;
+      border: 2px solid var(--border-light);
+    }
+
+    .modal-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 auto 12px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .modal-icon.warn {
+      background-color: var(--amber-bg);
+      color: var(--amber-text);
+      border: 2px solid var(--amber-border);
+    }
+
+    .modal-icon.confirm {
+      background-color: var(--emerald-tint);
+      color: var(--emerald-deep);
+      border: 2px solid var(--emerald-main);
+    }
+
+    .modal-title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .modal-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      line-height: 1.45;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .modal-actions .btn {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor Único Principal -->
+  <main id="app-content"></main>
+
+  <!-- Pie de página institucional -->
+  <footer class="app-footer">
+    La Energía en los Procesos de la Vida Diaria &bull; Examen Parcial (Progresiones 11–16)
+  </footer>
+
+  <script>
+    /* ==========================================================================
+       BANCO DE 30 REACTIVOS AUDITADOS (PROGRESIONES 11 A 16)
+       - Distribución por Progresión: P11=5, P12=5, P13=5, P14=5, P15=5, P16=5.
+       - Distribución de Claves: A=8, B=7, C=8, D=7 (Total = 30).
+       - Secuencia intercalada sin repeticiones consecutivas de letra ni progresión.
+       - Sin LaTeX ni MathJax: únicamente HTML/Unicode.
+       ========================================================================== */
+    const QUESTIONS_BANK = [
+      {
+        id: 1,
+        prog: "P11",
+        progLabel: "Progresión 11",
+        text: "En el diagrama se muestra un campo eléctrico uniforme dirigido hacia la derecha. Si una partícula con carga negativa (−q) se desplaza a favor de la dirección de las líneas del campo eléctrico (de izquierda a derecha), ¿qué sucede con la energía potencial eléctrica almacenada en el sistema?",
+        svg: `<div class="svg-figure-box">
+                <svg viewBox="0 0 340 120" role="img" aria-label="Carga negativa desplazándose a favor de un campo eléctrico">
+                  <rect x="8" y="8" width="324" height="104" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <text x="170" y="24" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle">Campo Eléctrico Uniforme (E →)</text>
+                  <line x1="36" y1="42" x2="296" y2="42" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4"/>
+                  <polygon points="304,42 294,37 294,47" fill="#f59e0b"/>
+                  <line x1="36" y1="68" x2="296" y2="68" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4"/>
+                  <polygon points="304,68 294,63 294,73" fill="#f59e0b"/>
+                  <line x1="36" y1="94" x2="296" y2="94" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4"/>
+                  <polygon points="304,94 294,89 294,99" fill="#f59e0b"/>
+                  <circle cx="115" cy="68" r="14" fill="#0f172a"/>
+                  <text x="115" y="72" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">−q</text>
+                  <line x1="135" y1="68" x2="215" y2="68" stroke="#059669" stroke-width="3"/>
+                  <polygon points="225,68 213,62 213,74" fill="#059669"/>
+                  <text x="180" y="58" font-size="10" font-weight="bold" fill="#065f46" text-anchor="middle">Desplazamiento</text>
+                </svg>
+              </div>`,
+        options: [
+          "A) Disminuye, porque toda partícula cargada pierde energía al moverse en el sentido del campo.",
+          "B) Aumenta, porque la fuerza eléctrica sobre la carga negativa apunta hacia la izquierda y se realiza trabajo en contra de ella.",
+          "C) Permanece constante, ya que la magnitud de la carga negativa no altera el valor del campo uniforme.",
+          "D) Se transforma íntegramente en energía magnética al cruzar perpendicularmente las líneas de fuerza."
+        ],
+        correct: 1, // B
+        explanation: "Sobre una partícula negativa actúa una fuerza eléctrica en sentido opuesto al campo (hacia la izquierda). Al desplazarla hacia la derecha (en contra de dicha fuerza), se realiza trabajo sobre el sistema y aumenta su energía potencial eléctrica."
+      },
+      {
+        id: 2,
+        prog: "P13",
+        progLabel: "Progresión 13",
+        text: "El esquema muestra un imán recto que se introduce y se retira rápidamente dentro de una bobina de alambre de cobre conectada a un medidor de corriente. ¿Qué transformación fundamental de energía ilustra este experimento de inducción electromagnética?",
+        svg: `<div class="svg-figure-box">
+                <svg viewBox="0 0 340 125" role="img" aria-label="Inducción electromagnética con imán y bobina">
+                  <rect x="8" y="8" width="324" height="109" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <rect x="26" y="48" width="46" height="24" rx="3" fill="#dc2626"/>
+                  <text x="49" y="64" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S</text>
+                  <rect x="72" y="48" width="46" height="24" rx="3" fill="#059669"/>
+                  <text x="95" y="64" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">N</text>
+                  <line x1="45" y1="34" x2="100" y2="34" stroke="#0f172a" stroke-width="2"/>
+                  <polygon points="38,34 46,30 46,38" fill="#0f172a"/>
+                  <polygon points="107,34 99,30 99,38" fill="#0f172a"/>
+                  <text x="72" y="26" font-size="9.5" font-weight="bold" fill="#334155" text-anchor="middle">Movimiento</text>
+                  <rect x="138" y="38" width="84" height="44" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+                  <path d="M150 38 V82 M164 38 V82 M178 38 V82 M192 38 V82 M206 38 V82" stroke="#b45309" stroke-width="2.5"/>
+                  <text x="180" y="98" font-size="10" font-weight="bold" fill="#92400e" text-anchor="middle">Bobina de cobre</text>
+                  <polyline points="222,50 265,50 265,62" fill="none" stroke="#334155" stroke-width="2"/>
+                  <polyline points="222,72 265,72 265,62" fill="none" stroke="#334155" stroke-width="2"/>
+                  <circle cx="288" cy="62" r="22" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+                  <line x1="288" y1="62" x2="298" y2="48" stroke="#dc2626" stroke-width="2.5"/>
+                  <text x="288" y="98" font-size="10" font-weight="bold" fill="#047857" text-anchor="middle">Corriente (I)</text>
+                </svg>
+              </div>`,
+        options: [
+          "A) De energía térmica del ambiente hacia energía potencial química dentro del imán.",
+          "B) De energía eléctrica almacenada en la bobina hacia energía gravitatoria del medidor.",
+          "C) De energía mecánica del movimiento relativo hacia energía eléctrica transmitida como corriente.",
+          "D) De energía luminosa de los electrones hacia energía elástica en los extremos del cable."
+        ],
+        correct: 2, // C
+        explanation: "La inducción electromagnética permite generar corriente eléctrica al mover un imán respecto a una bobina conductora, transformando energía mecánica (movimiento) en energía eléctrica."
+      },
+      {
+        id: 3,
+        prog: "P15",
+        progLabel: "Progresión 15",
+        text: "En los procesos globales del planeta Tierra, existe una diferencia fundamental entre el comportamiento de la energía proveniente del Sol y el comportamiento de la materia (como el agua o el carbono). ¿Cuál enunciado describe correctamente ambos comportamientos?",
+        options: [
+          "A) La energía circula en ciclos cerrados sin disiparse, mientras que la materia fluye y escapa al espacio.",
+          "B) Tanto la energía como la materia se destruyen completamente al pasar por los consumidores primarios.",
+          "C) La materia es creada continuamente por la radiación solar y la energía permanece fija en las rocas.",
+          "D) La energía fluye en una sola dirección disipándose finalmente como calor, mientras que la materia se recicla en ciclos."
+        ],
+        correct: 3, // D
+        explanation: "En el sistema Tierra, la energía solar sigue un flujo unidireccional (entra como radiación, impulsa procesos y se disipa como calor al espacio), mientras que los átomos de la materia se conservan y recirculan en ciclos."
+      },
+      {
+        id: 4,
+        prog: "P12",
+        progLabel: "Progresión 12",
+        text: "Tanto una batería alcalina nueva como un capacitor cargado almacenan energía eléctrica en un circuito, pero cumplen funciones distintas en dispositivos cotidianos como el flash de una cámara o un desfibrilador médico. ¿Cuál es la ventaja principal del capacitor en estas aplicaciones?",
+        options: [
+          "A) Puede liberar casi toda su energía almacenada en una descarga rápida e intensa de muy corta duración.",
+          "B) Genera energía eléctrica nueva mediante reacciones químicas continuas sin necesitar una fuente externa.",
+          "C) Mantiene un voltaje perfectamente constante durante varias semanas de funcionamiento ininterrumpido.",
+          "D) Transforma directamente el calor del ambiente en corriente alterna de baja intensidad."
+        ],
+        correct: 0, // A
+        explanation: "A diferencia de una batería que libera energía gradualmente mediante reacciones químicas, un capacitor acumula carga en sus placas y la entrega en un pulso casi instantáneo de alta potencia."
+      },
+      {
+        id: 5,
+        prog: "P16",
+        progLabel: "Progresión 16",
+        text: "Observa el diagrama de una celda de convección en el manto terrestre. ¿Por qué el material rocoso caliente asciende desde las zonas profundas hacia la litosfera y posteriormente desciende de nuevo hacia el interior?",
+        svg: `<div class="svg-figure-box">
+                <svg viewBox="0 0 340 130" role="img" aria-label="Celdas de convección térmica en el manto terrestre">
+                  <rect x="8" y="8" width="324" height="114" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <rect x="24" y="18" width="138" height="14" rx="2" fill="#64748b"/>
+                  <rect x="178" y="18" width="138" height="14" rx="2" fill="#64748b"/>
+                  <text x="170" y="28" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">Litosfera / Placas</text>
+                  <rect x="24" y="34" width="292" height="64" rx="3" fill="#fef3c7"/>
+                  <path d="M 155 90 C 155 55, 130 42, 75 45 C 48 47, 45 75, 75 88" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+                  <polygon points="155,46 150,55 160,55" fill="#dc2626"/>
+                  <polygon points="56,78 51,69 61,69" fill="#0284c7"/>
+                  <path d="M 185 90 C 185 55, 210 42, 265 45 C 292 47, 295 75, 265 88" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+                  <polygon points="185,46 180,55 190,55" fill="#dc2626"/>
+                  <polygon points="284,78 279,69 289,69" fill="#0284c7"/>
+                  <text x="170" y="72" font-size="9.5" font-weight="bold" fill="#991b1b" text-anchor="middle">Asciende (menos denso)</text>
+                  <rect x="24" y="100" width="292" height="16" rx="3" fill="#dc2626"/>
+                  <text x="170" y="111" font-size="9.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Interior Caliente (Flujo de energía hacia el exterior)</text>
+                </svg>
+              </div>`,
+        options: [
+          "A) Porque las corrientes oceánicas superficiales succionan el magma frío hacia el núcleo metálico.",
+          "B) Porque la rotación de la Luna empuja las placas continentales hacia el fondo del manto líquido.",
+          "C) Porque los campos eléctricos de la atmósfera atraen los minerales de hierro hacia las dorsales.",
+          "D) Porque al calentarse se expande y disminuye su densidad flotando, y al enfriarse arriba se vuelve más denso y la gravedad lo hunde."
+        ],
+        correct: 3, // D
+        explanation: "La convección térmica ocurre porque el material profundo calentado por el interior terrestre se expande, reduce su densidad y asciende; al enfriarse cerca de la superficie, aumenta su densidad y desciende por efecto gravitacional."
+      },
+      {
+        id: 6,
+        prog: "P14",
+        progLabel: "Progresión 14",
+        text: "Durante una carrera de velocidad, una persona respira agitadamente para ingresar mayor cantidad de oxígeno (O<sub>2</sub>) a su organismo. Desde el punto de vista de las reacciones químicas en la respiración celular, ¿cuál es el papel real del oxígeno?",
+        options: [
+          "A) Es la fuente directa de energía pura que mueve las fibras musculares sin requerir alimentos.",
+          "B) Participa en las reacciones químicas que degradan la glucosa para liberar energía y sintetizar ATP.",
+          "C) Se convierte directamente en moléculas de glucosa dentro de los pulmones para nutrir la sangre.",
+          "D) Absorbe el exceso de calor de los músculos para transformarlo en dióxido de carbono sólido."
+        ],
+        correct: 1, // B
+        explanation: "El oxígeno no es energía en sí mismo; actúa como reactivo químico indispensable en la respiración celular aerobia para romper enlaces y obtener energía útil (ATP) a partir de la glucosa."
+      },
+      {
+        id: 7,
+        prog: "P12",
+        progLabel: "Progresión 12",
+        text: "En una práctica escolar de la Progresión 12, se introduce un radio portátil encendido dentro de una caja cerrada construida con malla metálica conductora (jaula de Faraday) y la señal se interrumpe. ¿Qué explicación física justifica este resultado?",
+        options: [
+          "A) La malla metálica absorbe toda la energía química de las baterías del radio en pocos segundos.",
+          "B) El aire encerrado dentro de la jaula pierde su presión y detiene la propagación de las ondas sonoras.",
+          "C) Los electrones libres del metal se redistribuyen en la superficie exterior, anulando el campo eléctrico en el interior.",
+          "D) El metal transforma las ondas electromagnéticas en corrientes térmicas que desconectan la bocina."
+        ],
+        correct: 2, // C
+        explanation: "En una jaula de Faraday, las cargas libres del material conductor se reorganizan en la superficie externa en respuesta a campos externos, cancelando el campo eléctrico neto en el espacio interior."
+      },
+      {
+        id: 8,
+        prog: "P14",
+        progLabel: "Progresión 14",
+        text: "El diagrama representa la conexión energética y material entre la fotosíntesis y la respiración celular en los ecosistemas. ¿Qué afirmación interpreta correctamente este ciclo?",
+        svg: `<div class="svg-figure-box">
+                <svg viewBox="0 0 340 125" role="img" aria-label="Ciclo fotosíntesis y respiración celular">
+                  <rect x="8" y="8" width="324" height="109" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <circle cx="42" cy="36" r="16" fill="#f59e0b"/>
+                  <text x="42" y="40" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">SOL</text>
+                  <line x1="62" y1="36" x2="96" y2="36" stroke="#f59e0b" stroke-width="2.5"/>
+                  <polygon points="103,36 95,31 95,41" fill="#f59e0b"/>
+                  <rect x="106" y="18" width="104" height="36" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.8"/>
+                  <text x="158" y="34" font-size="10" font-weight="bold" fill="#065f46" text-anchor="middle">Fotosíntesis</text>
+                  <text x="158" y="47" font-size="8.5" fill="#047857" text-anchor="middle">(Autótrofos)</text>
+                  <path d="M 212 36 Q 275 36 275 62" fill="none" stroke="#059669" stroke-width="2"/>
+                  <polygon points="275,68 270,60 280,60" fill="#059669"/>
+                  <text x="275" y="28" font-size="9" font-weight="bold" fill="#065f46" text-anchor="middle">Glucosa + O₂</text>
+                  <rect x="106" y="70" width="128" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.8"/>
+                  <text x="170" y="86" font-size="10" font-weight="bold" fill="#92400e" text-anchor="middle">Respiración Celular</text>
+                  <text x="170" y="99" font-size="8.5" fill="#b45309" text-anchor="middle">ATP + Calor</text>
+                  <path d="M 104 89 Q 60 89 124 56" fill="none" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,3"/>
+                  <text x="58" y="104" font-size="8.5" font-weight="bold" fill="#475569" text-anchor="middle">CO₂ + H₂O</text>
+                </svg>
+              </div>`,
+        options: [
+          "A) La respiración celular captura luz solar directamente para fabricar glucosa a partir de dióxido de carbono.",
+          "B) Las plantas producen ATP exclusivamente durante la noche sin utilizar los productos de la fotosíntesis.",
+          "C) Ambos procesos destruyen átomos de carbono y oxígeno para generar energía térmica en los músculos.",
+          "D) La fotosíntesis almacena energía luminosa en enlaces de glucosa, y la respiración celular libera esa energía en compuestos útiles como el ATP."
+        ],
+        correct: 3, // D
+        explanation: "La fotosíntesis convierte energía luminosa en energía química dentro de la glucosa; posteriormente, la respiración celular degrada esa glucosa con oxígeno para sintetizar ATP y liberar calor."
+      },
+      {
+        id: 9,
+        prog: "P11",
+        progLabel: "Progresión 11",
+        text: "Al comparar los conceptos de «energía potencial eléctrica» y «potencial eléctrico» (voltaje) en un sistema de cargas, ¿cuál es la diferencia física correcta entre ambas magnitudes?",
+        options: [
+          "A) El potencial eléctrico es la energía potencial eléctrica por unidad de carga (Joule por Coulomb).",
+          "B) La energía potencial eléctrica solo existe en circuitos cerrados y el voltaje únicamente en imanes.",
+          "C) El potencial eléctrico se mide en Amperes y representa la velocidad de los electrones en un cable.",
+          "D) La energía potencial eléctrica es independiente de la posición relativa de las cargas en el espacio."
+        ],
+        correct: 0, // A
+        explanation: "El potencial eléctrico (V = U / q) mide la cantidad de energía potencial eléctrica disponible por cada unidad de carga, cuya unidad en el Sistema Internacional es el volt (1 V = 1 J/C)."
+      },
+      {
+        id: 10,
+        prog: "P16",
+        progLabel: "Progresión 16",
+        text: "La convección del manto terrestre requiere un flujo continuo de calor desde el interior del planeta hacia la superficie. ¿Cuáles son las dos fuentes principales que originan esta energía térmica interna de la Tierra?",
+        options: [
+          "A) La absorción de radiación solar por los océanos profundos y la fricción de los vientos alisios.",
+          "B) El calor residual atrapado durante la formación del planeta y la desintegración radiactiva de elementos como uranio, torio y potasio.",
+          "C) La combustión subterránea de depósitos de carbón y petróleo junto con las descargas de rayos en las tormentas.",
+          "D) El calentamiento por efecto Joule producido por las corrientes eléctricas de las redes urbanas."
+        ],
+        correct: 1, // B
+        explanation: "El interior terrestre conserva calor primordial (residual) desde la formación del planeta hace unos 4,500 millones de años y recibe aporte térmico continuo por la desintegración radiactiva de isótopos en el manto y núcleo."
+      },
+      {
+        id: 11,
+        prog: "P13",
+        progLabel: "Progresión 13",
+        text: "Cuando una tostadora o una plancha eléctrica se conecta a la corriente, su resistencia interna alcanza altas temperaturas. Desde el punto de vista microscópico (efecto Joule), ¿cómo se produce este calentamiento?",
+        options: [
+          "A) El cable destruye átomos de cobre para convertir su masa directamente en radiación infrarroja.",
+          "B) La diferencia de potencial absorbe el frío del aire circundante y lo concentra dentro del filamento.",
+          "C) Los electrones en movimiento chocan contra los átomos del conductor, transfiriéndoles energía cinética en forma de agitación térmica.",
+          "D) Los protones del núcleo metálico viajan a gran velocidad hacia el enchufe rozando el aislante plástico."
+        ],
+        correct: 2, // C
+        explanation: "Por efecto Joule, al circular una corriente eléctrica, los electrones colisionan con los átomos de la red metálica del conductor, aumentando su vibración térmica y elevando la temperatura."
+      },
+      {
+        id: 12,
+        prog: "P15",
+        progLabel: "Progresión 15",
+        text: "De toda la radiación solar que llega a la Tierra, aproximadamente el 30 % se refleja de vuelta al espacio y el 70 % es absorbido por la atmósfera, los océanos y el suelo. ¿Qué papel cumple el efecto invernadero natural en este balance energético?",
+        options: [
+          "A) Impide que el 70 % de la luz solar atraviese la atmósfera, enfriando los océanos por debajo de −18 °C.",
+          "B) Refleja el 100 % de los rayos ultravioleta hacia el núcleo terrestre para alimentar la convección del manto.",
+          "C) Convierte directamente el nitrógeno atmosférico en combustibles fósiles mediante descargas eléctricas.",
+          "D) Retiene parte de la radiación infrarroja emitida por la superficie terrestre mediante gases como CO<sub>2</sub> y vapor de agua, manteniendo una temperatura habitable."
+        ],
+        correct: 3, // D
+        explanation: "Los gases de efecto invernadero absorben y reemiten parte de la radiación infrarroja emitida por la Tierra calentada por el Sol, evitando que la temperatura media descienda a unos −18 °C."
+      },
+      {
+        id: 13,
+        prog: "P11",
+        progLabel: "Progresión 11",
+        text: "Dentro de un campo eléctrico, se requiere realizar un trabajo externo de 12 J para trasladar una partícula con carga de 0.03 C desde un punto A hasta un punto B. Considerando que ΔV = W / q, ¿cuál es la diferencia de potencial (voltaje) entre ambos puntos?",
+        options: [
+          "A) 0.36 V",
+          "B) 40 V",
+          "C) 400 V",
+          "D) 360 V"
+        ],
+        correct: 2, // C
+        explanation: "La diferencia de potencial se obtiene dividiendo el trabajo entre la carga: ΔV = 12 J / 0.03 C = 400 V."
+      },
+      {
+        id: 14,
+        prog: "P13",
+        progLabel: "Progresión 13",
+        text: "Un foco incandescente cuya resistencia eléctrica es de 30 Ω se conecta a una batería que suministra una diferencia de potencial de 12 V. Aplicando la ley de Ohm (I = V / R), ¿qué intensidad de corriente eléctrica circula por el filamento?",
+        options: [
+          "A) 0.4 A",
+          "B) 2.5 A",
+          "C) 18 A",
+          "D) 360 A"
+        ],
+        correct: 0, // A
+        explanation: "Según la ley de Ohm, I = V / R. Al sustituir los valores del circuito: I = 12 V / 30 Ω = 0.4 A."
+      },
+      {
+        id: 15,
+        prog: "P14",
+        progLabel: "Progresión 14",
+        text: "Una persona permanece en reposo dentro de una habitación fría a 10 °C, pero su temperatura corporal interna se mantiene estable alrededor de 37 °C. ¿Cómo explica la Progresión 14 este equilibrio térmico frente a la pérdida continua de calor hacia el entorno?",
+        options: [
+          "A) La piel bloquea por completo cualquier transferencia de calor hacia el aire frío mediante aislamiento magnético.",
+          "B) Los pulmones absorben aire frío y lo transforman químicamente en glucosa caliente dentro de los alvéolos.",
+          "C) El cuerpo detiene la síntesis de ATP para acumular toda la energía de los alimentos en forma de grasa estática.",
+          "D) La respiración celular degrada continuamente nutrientes químicos, liberando energía térmica que compensa el calor cedido al ambiente."
+        ],
+        correct: 3, // D
+        explanation: "Las reacciones químicas de la respiración celular liberan constantemente calor como subproducto metabólico, permitiendo sostener la temperatura corporal pese a la transferencia continua de calor hacia el entorno frío."
+      },
+      {
+        id: 16,
+        prog: "P16",
+        progLabel: "Progresión 16",
+        text: "El Cinturón de Fuego del Pacífico concentra gran parte de la actividad sísmica y volcánica del planeta debido a que las placas oceánicas más densas se hunden por debajo de las placas continentales. ¿Cómo se denomina este proceso tectónico?",
+        options: [
+          "A) Subducción en límite convergente.",
+          "B) Expansión de dorsal divergente.",
+          "C) Deslizamiento de falla transformante.",
+          "D) Erosión sedimentaria superficial."
+        ],
+        correct: 0, // A
+        explanation: "En los límites convergentes donde chocan una placa oceánica (más densa) y una continental, la placa oceánica se hunde hacia el manto mediante subducción, generando fosas, sismos y volcanismo."
+      },
+      {
+        id: 17,
+        prog: "P12",
+        progLabel: "Progresión 12",
+        text: "En el laboratorio se arma el circuito de la figura con una pila de 9 V y tres focos idénticos conectados en serie. Si con el interruptor cerrado se desenrosca y retira el foco 2 de su base, ¿qué ocurre con los otros dos focos?",
+        svg: `<div class="svg-figure-box">
+                <svg viewBox="0 0 340 125" role="img" aria-label="Circuito en serie con pila de 9 V y tres focos">
+                  <rect x="8" y="8" width="324" height="109" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <rect x="28" y="42" width="26" height="42" rx="4" fill="#059669"/>
+                  <text x="41" y="67" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">9 V</text>
+                  <polyline points="41,42 41,24 300,24 300,98 41,98 41,84" fill="none" stroke="#334155" stroke-width="2.2"/>
+                  <circle cx="110" cy="24" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+                  <text x="110" y="28" font-size="9" font-weight="bold" fill="#92400e" text-anchor="middle">F1</text>
+                  <circle cx="185" cy="24" r="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2" stroke-dasharray="3,2"/>
+                  <text x="185" y="28" font-size="9" font-weight="bold" fill="#991b1b" text-anchor="middle">F2</text>
+                  <text x="185" y="50" font-size="8.5" font-weight="bold" fill="#dc2626" text-anchor="middle">(Retirado)</text>
+                  <circle cx="260" cy="24" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+                  <text x="260" y="28" font-size="9" font-weight="bold" fill="#92400e" text-anchor="middle">F3</text>
+                  <text x="170" y="86" font-size="9.5" font-weight="bold" fill="#334155" text-anchor="middle">Conexión en Serie (una sola trayectoria)</text>
+                </svg>
+              </div>`,
+        options: [
+          "A) Los focos 1 y 3 brillan con mayor intensidad al recibir cada uno los 9 V completos de la pila.",
+          "B) Los focos 1 y 3 se apagan de inmediato porque se interrumpe la trayectoria cerrada de la corriente.",
+          "C) El foco 1 permanece encendido y el foco 3 se apaga porque la corriente solo llega hasta el primer componente.",
+          "D) La pila aumenta su diferencia de potencial a 18 V para saltar el espacio vacío del foco retirado."
+        ],
+        correct: 1, // B
+        explanation: "En una conexión en serie existe una única trayectoria para las cargas; al retirar un foco, el circuito queda abierto, cesa la corriente eléctrica y todos los focos se apagan."
+      },
+      {
+        id: 18,
+        prog: "P15",
+        progLabel: "Progresión 15",
+        text: "La radiación solar calienta la superficie del océano, provocando la evaporación del agua que luego se condensa en nubes y precipita como lluvia sobre las montañas, erosionando las rocas y nutriendo los bosques. ¿Qué subsistemas terrestres interactúan en esta secuencia?",
+        options: [
+          "A) Exclusivamente el núcleo externo y la corteza oceánica profunda.",
+          "B) Únicamente la atmósfera superior y la magnetosfera polar.",
+          "C) La hidrosfera, la atmósfera, la geosfera y la biosfera impulsadas por la energía solar.",
+          "D) Únicamente la biosfera terrestre sin intercambio de materia con el océano ni el aire."
+        ],
+        correct: 2, // C
+        explanation: "El ciclo del agua conecta la hidrosfera (océanos/lluvia), la atmósfera (vapor/nubes), la geosfera (montañas/suelo) y la biosfera (bosques), todo impulsado por la energía del Sol."
+      },
+      {
+        id: 19,
+        prog: "P11",
+        progLabel: "Progresión 11",
+        text: "De acuerdo con el enunciado central de la Progresión 11, ¿qué condición es indispensable para que cambie la energía potencial almacenada en un campo (ya sea gravitatorio o eléctrico)?",
+        options: [
+          "A) Que dos objetos que interactúan a través del campo modifiquen su posición relativa entre sí.",
+          "B) Que los objetos permanezcan completamente inmóviles en el mismo punto del espacio.",
+          "C) Que desaparezca la fuerza de interacción entre los objetos mientras se miden con un multímetro.",
+          "D) Que los objetos tengan exactamente la misma masa y la misma carga eléctrica neutra."
+        ],
+        correct: 0, // A
+        explanation: "La energía potencial es una propiedad del sistema; cuando dos objetos que interactúan mediante un campo cambian su separación o posición relativa, cambia la energía almacenada en dicho campo."
+      },
+      {
+        id: 20,
+        prog: "P13",
+        progLabel: "Progresión 13",
+        text: "En una vivienda cotidiana funcionan simultáneamente una licuadora, una bocina Bluetooth conectada y un foco LED. ¿Qué secuencia identifica correctamente la transformación principal de energía eléctrica que realiza cada dispositivo?",
+        options: [
+          "A) Licuadora: sonido; bocina: calor; foco LED: movimiento mecánico.",
+          "B) Licuadora: energía química; bocina: energía nuclear; foco LED: energía potencial elástica.",
+          "C) Licuadora: movimiento mecánico; bocina: sonido; foco LED: luz.",
+          "D) Licuadora: luz; bocina: movimiento mecánico; foco LED: sonido."
+        ],
+        correct: 2, // C
+        explanation: "La corriente eléctrica transfiere energía que los dispositivos transforman según su función: movimiento (motor de licuadora), sonido (diafragma de bocina) y luz (semiconductor LED)."
+      },
+      {
+        id: 21,
+        prog: "P16",
+        progLabel: "Progresión 16",
+        text: "En un límite tectónico transformante, dos placas litosféricas se desplazan lateralmente una junto a otra, pero la fricción entre las rocas impide un deslizamiento suave. ¿Cómo se origina un sismo en este tipo de frontera?",
+        options: [
+          "A) El magma asciende formando un volcán submarino que evapora el océano instantáneamente.",
+          "B) Las rocas acumulan energía potencial elástica por deformación hasta fracturarse, liberando esa energía repentinamente como ondas sísmicas.",
+          "C) Una placa se hunde hasta el núcleo líquido y detiene por unos segundos la gravedad local.",
+          "D) El agua de lluvia lubrica la falla y disuelve las rocas provocando el hundimiento silencioso del terreno."
+        ],
+        correct: 1, // B
+        explanation: "En las fallas transformantes, las placas trabadas por fricción acumulan tensión y energía elástica durante años; al superarse la resistencia de la roca, ocurre una ruptura súbita que libera ondas sísmicas."
+      },
+      {
+        id: 22,
+        prog: "P12",
+        progLabel: "Progresión 12",
+        text: "Un capacitor utilizado en un circuito electrónico tiene una capacitancia de 0.002 F y se conecta a una fuente que aplica una diferencia de potencial de 15 V. De acuerdo con la relación Q = C · ΔV, ¿cuánta carga eléctrica almacena en sus placas?",
+        options: [
+          "A) 0.00013 C",
+          "B) 7.5 C",
+          "C) 30 C",
+          "D) 0.03 C"
+        ],
+        correct: 3, // D
+        explanation: "Utilizando Q = C · ΔV, multiplicamos la capacitancia por el voltaje: Q = 0.002 F × 15 V = 0.03 C."
+      },
+      {
+        id: 23,
+        prog: "P14",
+        progLabel: "Progresión 14",
+        text: "En los seres vivos, la molécula de ATP (adenosín trifosfato) suele denominarse la «moneda energética celular». ¿Cuál es la función específica del ATP dentro del metabolismo?",
+        options: [
+          "A) Almacenar y transportar energía química liberada en la respiración celular hacia procesos como la contracción muscular.",
+          "B) Sustituir al oxígeno atmosférico cuando una persona realiza ejercicio físico intenso.",
+          "C) Absorber fotones de luz solar directamente a través de la piel para sintetizar proteínas.",
+          "D) Eliminar el dióxido de carbono de las arterias transformándolo en agua pura."
+        ],
+        correct: 0, // A
+        explanation: "El ATP capta la energía liberada durante la degradación de moléculas orgánicas en la respiración celular y la transfiere a los músculos y demás estructuras celulares para realizar trabajo."
+      },
+      {
+        id: 24,
+        prog: "P15",
+        progLabel: "Progresión 15",
+        text: "El carbón mineral, el petróleo y el gas natural que se emplean actualmente como combustibles representan reservas subterráneas de energía. Desde la perspectiva de la Progresión 15, ¿cuál es el origen último de la energía contenida en estos combustibles fósiles?",
+        options: [
+          "A) El calor radiactivo emitido por el núcleo interno de la Tierra durante las erupciones volcánicas.",
+          "B) La energía solar capturada hace millones de años mediante fotosíntesis por organismos antiguos y almacenada en enlaces químicos.",
+          "C) La fricción constante de las mareas oceánicas sobre las rocas sedimentarias del fondo marino.",
+          "D) Las descargas eléctricas de las tormentas que ionizaron el nitrógeno del suelo prehistórico."
+        ],
+        correct: 1, // B
+        explanation: "Los combustibles fósiles provienen de restos de plantas y microorganismos prehistóricos que capturaron radiación solar mediante fotosíntesis y la almacenaron en moléculas orgánicas."
+      },
+      {
+        id: 25,
+        prog: "P13",
+        progLabel: "Progresión 13",
+        text: "De acuerdo con el análisis de conductores eléctricos de la Progresión 13, si un alambre de cobre se sustituye por otro del mismo material pero más largo y más delgado (menor área transversal), ¿cómo cambia su resistencia eléctrica?",
+        options: [
+          "A) Disminuye, porque los electrones tienen menos espacio para chocar contra los átomos del metal.",
+          "B) Permanece igual, ya que la resistencia depende exclusivamente del voltaje de la pila conectada.",
+          "C) Aumenta, porque los electrones deben recorrer mayor distancia a través de una sección más estrecha, incrementando la oposición a su flujo.",
+          "D) Se reduce a cero convirtiéndose automáticamente en un material superconductor a temperatura ambiente."
+        ],
+        correct: 2, // C
+        explanation: "La resistencia eléctrica de un conductor es directamente proporcional a su longitud e inversamente proporcional a su área transversal; por ello, un cable más largo y delgado presenta mayor resistencia."
+      },
+      {
+        id: 26,
+        prog: "P11",
+        progLabel: "Progresión 11",
+        text: "Una pila comercial indica en su etiqueta «1.5 V», mientras que durante una tormenta eléctrica entre una nube y el suelo se registran decenas de millones de volts. ¿Qué significado físico comparten ambos valores de voltaje?",
+        options: [
+          "A) Indican la cantidad total de electrones libres que posee cada objeto en reposo.",
+          "B) Representan la diferencia de potencial eléctrico (energía por unidad de carga) disponible para impulsar cargas entre dos puntos.",
+          "C) Miden la resistencia eléctrica que ofrece el aire o el electrolito al paso de un imán.",
+          "D) Señalan la temperatura máxima que puede alcanzar el sistema antes de fundirse."
+        ],
+        correct: 1, // B
+        explanation: "Tanto en una pila como en una nube de tormenta, el voltaje expresa la diferencia de potencial eléctrico (Joules por Coulomb) entre dos terminales o regiones."
+      },
+      {
+        id: 27,
+        prog: "P14",
+        progLabel: "Progresión 14",
+        text: "Tanto la respiración celular aerobia como la fermentación degradan glucosa para obtener ATP en las células. Sin embargo, cuando un músculo trabaja sin suficiente oxígeno (fermentación láctica), ¿cuál es la principal diferencia energética respecto a la respiración aerobia?",
+        options: [
+          "A) La fermentación produce una cantidad mucho menor de moléculas de ATP por cada molécula de glucosa degradada.",
+          "B) La fermentación genera diez veces más ATP porque no gasta energía en romper moléculas de oxígeno.",
+          "C) La fermentación transforma el lactato directamente en luz solar dentro de las fibras musculares.",
+          "D) La respiración aerobia solo ocurre en plantas verdes y nunca en células animales o humanas."
+        ],
+        correct: 0, // A
+        explanation: "La fermentación ocurre en ausencia de oxígeno y degrada parcialmente la glucosa, obteniendo un rendimiento energético mucho menor (menos ATP) que la respiración celular aerobia."
+      },
+      {
+        id: 28,
+        prog: "P16",
+        progLabel: "Progresión 16",
+        text: "En el fondo del océano Atlántico existe una extensa cordillera submarina (dorsal oceánica) donde dos placas tectónicas se separan lentamente. ¿Qué proceso geológico ocurre en este límite divergente?",
+        options: [
+          "A) Una placa continental se hunde bajo el océano destruyendo toda la corteza terrestre de la región.",
+          "B) El agua del mar penetra hasta el núcleo sólido y enfría el planeta deteniendo las corrientes de convección.",
+          "C) Las placas chocan frontalmente formando cordilleras continentales sin presencia de actividad magmática.",
+          "D) El material caliente del manto asciende por la separación entre placas, se enfría y solidifica formando nueva corteza oceánica."
+        ],
+        correct: 3, // D
+        explanation: "En los límites divergentes (como las dorsales oceánicas), la separación de las placas permite el ascenso de material caliente del manto que, al enfriarse, forma nueva litosfera oceánica."
+      },
+      {
+        id: 29,
+        prog: "P12",
+        progLabel: "Progresión 12",
+        text: "De acuerdo con la Progresión 12, el término «energía eléctrica» abarca dos manifestaciones distintas en la vida diaria. ¿Cuál situación ejemplifica específicamente la energía eléctrica almacenada en un dispositivo?",
+        options: [
+          "A) Los electrones desplazándose ordenadamente por los cables de cobre hacia un televisor encendido.",
+          "B) La corriente alterna que viaja desde una central hidroeléctrica hasta los postes de una ciudad.",
+          "C) La energía potencial electroquímica contenida dentro de una batería de teléfono móvil desconectada y cargada.",
+          "D) El flujo de cargas que circula por la resistencia de una parrilla eléctrica mientras calienta agua."
+        ],
+        correct: 2, // C
+        explanation: "Una batería cargada y desconectada conserva energía eléctrica almacenada en forma de potencial electroquímico, lista para impulsar corriente al cerrar un circuito."
+      },
+      {
+        id: 30,
+        prog: "P15",
+        progLabel: "Progresión 15",
+        text: "En el ciclo biogeoquímico del carbono, las plantas absorben CO<sub>2</sub> atmosférico durante la fotosíntesis, los animales obtienen carbono al alimentarse y tanto organismos vivos como descomponedores devuelven CO<sub>2</sub> al aire mediante la respiración. ¿Qué principio demuestra este ciclo?",
+        options: [
+          "A) La materia se conserva y circula continuamente entre la atmósfera, la biosfera y el suelo impulsada por la energía solar.",
+          "B) Los átomos de carbono se crean nuevos en las hojas y desaparecen al ser exhalados por los animales.",
+          "C) El carbono solo puede existir en forma gaseosa y nunca forma parte de moléculas orgánicas sólidas.",
+          "D) La fotosíntesis y la respiración detienen por completo el intercambio de gases entre los océanos y el aire."
+        ],
+        correct: 0, // A
+        explanation: "El ciclo del carbono evidencia que la materia no se crea ni se destruye en los ecosistemas, sino que circula y se transforma entre reservorios bióticos y abióticos gracias al flujo energético solar."
+      }
+    ];
+
+    /* ==========================================================================
+       ÚNICA FUENTE DE VERDAD (ESTADO GLOBAL DE LA APLICACIÓN)
+       ========================================================================== */
+    const STORAGE_KEY = "examen_parcial_p11_p16_verde_v1";
+
+    const state = {
+      user: { name: "", group: "" },
+      started: false,
+      currentQuestion: 0,
+      questionOrder: [],
+      answers: {},
+      finished: false,
+      results: null
+    };
+
+    let reviewExpanded = false;
+    let isSubmitting = false;
+
+    /* ==========================================================================
+       PERSISTENCIA ROBUSTA OFFLINE CON TRY/CATCH
+       ========================================================================== */
+    function initDefaultOrder() {
+      return QUESTIONS_BANK.map((_, index) => index);
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === "object") {
+            state.user = parsed.user && typeof parsed.user === "object" ? parsed.user : { name: "", group: "" };
+            state.started = Boolean(parsed.started);
+            state.currentQuestion = Number.isInteger(parsed.currentQuestion) ? parsed.currentQuestion : 0;
+            state.questionOrder = Array.isArray(parsed.questionOrder) && parsed.questionOrder.length === QUESTIONS_BANK.length
+              ? parsed.questionOrder
+              : initDefaultOrder();
+            state.answers = parsed.answers && typeof parsed.answers === "object" ? parsed.answers : {};
+            state.finished = Boolean(parsed.finished);
+            state.results = parsed.results || null;
+            return;
+          }
+        }
+      } catch (err) {
+        // Si localStorage está bloqueado o falla, continúa normalmente en memoria
+      }
+      state.questionOrder = initDefaultOrder();
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (err) {
+        // Silencioso para garantizar funcionamiento offline incluso en modo privado
+      }
+    }
+
+    /* ==========================================================================
+       UTILIDADES DE FORMATO Y MODALES PROPIOS (SIN alert() NI confirm())
+       ========================================================================== */
+    function escapeHTML(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatSpanishList(numbers) {
+      if (numbers.length === 0) return "";
+      if (numbers.length === 1) return String(numbers[0]);
+      const head = numbers.slice(0, -1).join(", ");
+      const last = numbers[numbers.length - 1];
+      return `${head} y ${last}`;
+    }
+
+    function showModal({ type, title, bodyHTML, confirmText, cancelText, onConfirm }) {
+      closeActiveModal();
+      const backdrop = document.createElement("div");
+      backdrop.className = "modal-backdrop";
+      backdrop.id = "custom-app-modal";
+
+      const iconSymbol = type === "confirm" ? "✓" : "!";
+      const iconClass = type === "confirm" ? "confirm" : "warn";
+
+      backdrop.innerHTML = `
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
+          <div class="modal-icon ${iconClass}">${iconSymbol}</div>
+          <h3 class="modal-title" id="modal-title-text">${title}</h3>
+          <div class="modal-body">${bodyHTML}</div>
+          <div class="modal-actions">
+            ${cancelText ? `<button type="button" class="btn btn-secondary" id="modal-cancel-btn">${cancelText}</button>` : ""}
+            <button type="button" class="btn btn-primary" id="modal-ok-btn">${confirmText || "ENTENDIDO"}</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(backdrop);
+
+      const okBtn = document.getElementById("modal-ok-btn");
+      const cancelBtn = document.getElementById("modal-cancel-btn");
+
+      if (cancelBtn) {
+        cancelBtn.addEventListener("click", closeActiveModal);
+      }
+      if (okBtn) {
+        okBtn.addEventListener("click", function () {
+          if (typeof onConfirm === "function") {
+            onConfirm(okBtn);
+          } else {
+            closeActiveModal();
+          }
+        });
+      }
+    }
+
+    function closeActiveModal() {
+      const existing = document.getElementById("custom-app-modal");
+      if (existing) existing.remove();
+    }
+
+    /* ==========================================================================
+       RENDERIZADO PRINCIPAL
+       ========================================================================== */
+    function renderApp() {
+      const container = document.getElementById("app-content");
+      if (!container) return;
+
+      // Control estricto del fondo Verde Esmeralda en la pantalla final
+      if (state.finished && state.results) {
+        document.body.classList.add("results-green-mode");
+      } else {
+        document.body.classList.remove("results-green-mode");
+      }
+
+      if (!state.started) {
+        container.innerHTML = renderWelcomeView();
+      } else if (!state.finished) {
+        container.innerHTML = renderExamView();
+      } else {
+        container.innerHTML = renderResultsView();
+      }
+    }
+
+    /* ==========================================================================
+       VISTA 1: PANTALLA INICIAL E IDENTIFICACIÓN OBLIGATORIA
+       ========================================================================== */
+    function renderWelcomeView() {
+      return `
+        <section class="card">
+          <div class="welcome-header">
+            <span class="badge-pill">Educación Media Superior &bull; Evaluación Sumativa</span>
+            <h1 class="welcome-title">LA ENERGÍA EN LOS PROCESOS DE LA VIDA DIARIA</h1>
+            <p class="welcome-subtitle">EXAMEN PARCIAL &bull; PROGRESIONES 11–16 &bull; 30 REACTIVOS</p>
+          </div>
+
+          <div class="info-box">
+            <ul>
+              <li><span class="info-dot">&bull;</span><span><strong>Cobertura temática:</strong> Progresiones 11, 12, 13, 14, 15 y 16 (5 reactivos por cada progresión).</span></li>
+              <li><span class="info-dot">&bull;</span><span><strong>Dinámica:</strong> Una pregunta por pantalla. Puedes avanzar, retroceder y cambiar tus respuestas antes de entregar.</span></li>
+              <li><span class="info-dot">&bull;</span><span><strong>Requisito:</strong> Es obligatorio contestar las 30 preguntas para habilitar la entrega definitiva.</span></li>
+            </ul>
+          </div>
+
+          <form id="start-exam-form" onsubmit="handleStartSubmit(event)" novalidate>
+            <div class="form-group">
+              <label for="input-student-name" class="form-label">Nombre Completo del Estudiante *</label>
+              <input
+                type="text"
+                id="input-student-name"
+                class="form-input"
+                placeholder="Escribe tu nombre y apellidos"
+                value="${escapeHTML(state.user.name)}"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="input-student-group" class="form-label">Grupo *</label>
+              <input
+                type="text"
+                id="input-student-group"
+                class="form-input"
+                placeholder="Ejemplo: 3° A"
+                value="${escapeHTML(state.user.group)}"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              COMENZAR EXAMEN
+            </button>
+          </form>
+        </section>
+      `;
+    }
+
+    function handleStartSubmit(event) {
+      event.preventDefault();
+      const nameEl = document.getElementById("input-student-name");
+      const groupEl = document.getElementById("input-student-group");
+
+      const nameVal = nameEl ? nameEl.value.trim() : "";
+      const groupVal = groupEl ? groupEl.value.trim() : "";
+
+      if (!nameVal || !groupVal) {
+        showModal({
+          type: "warn",
+          title: "Datos Obligatorios Incompletos",
+          bodyHTML: "Debes escribir tu <strong>Nombre Completo</strong> y tu <strong>Grupo</strong> para poder iniciar el examen.",
+          confirmText: "COMPLETAR DATOS"
+        });
+        return;
+      }
+
+      state.user = { name: nameVal, group: groupVal };
+      state.started = true;
+      state.currentQuestion = 0;
+      if (!Array.isArray(state.questionOrder) || state.questionOrder.length !== QUESTIONS_BANK.length) {
+        state.questionOrder = initDefaultOrder();
+      }
+      saveState();
+      renderApp();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       VISTA 2: EVALUACIÓN (UNA PREGUNTA POR PANTALLA)
+       ========================================================================== */
+    function renderExamView() {
+      const total = state.questionOrder.length;
+      const idx = Math.max(0, Math.min(state.currentQuestion, total - 1));
+      const bankIdx = state.questionOrder[idx];
+      const question = QUESTIONS_BANK[bankIdx];
+      const selectedOption = state.answers[question.id];
+      const answeredCount = Object.keys(state.answers).length;
+
+      return `
+        <div class="exam-stack">
+          <!-- Encabezado de Progreso -->
+          <header class="exam-topbar">
+            <div>
+              <div class="student-meta-line">${escapeHTML(state.user.name)} &bull; ${escapeHTML(state.user.group)}</div>
+              <div class="question-counter-title">PREGUNTA ${idx + 1} DE ${total}</div>
+            </div>
+            <div class="answered-pill">
+              Contestadas: <strong>${answeredCount}</strong> / ${total}
+            </div>
+          </header>
+
+          <!-- Tarjeta de Pregunta Actual (Sin pistas ni validación prematura) -->
+          <article class="card">
+            <p class="question-text">${question.text}</p>
+            ${question.svg ? question.svg : ""}
+
+            <div class="options-list" role="radiogroup" aria-label="Opciones de respuesta">
+              ${question.options.map((optionText, optIdx) => {
+                const isSelected = selectedOption === optIdx;
+                return `
+                  <button
+                    type="button"
+                    class="option-btn ${isSelected ? "selected" : ""}"
+                    onclick="handleSelectOption(${question.id}, ${optIdx})"
+                    aria-pressed="${isSelected}"
+                  >
+                    <span>${optionText}</span>
+                    <span class="option-radio">${isSelected ? "✓" : ""}</span>
+                  </button>
+                `;
+              }).join("")}
+            </div>
+          </article>
+
+          <!-- Botones Anterior / Entregar / Siguiente -->
+          <div class="nav-actions-bar">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="handleStepQuestion(-1)"
+              ${idx === 0 ? "disabled" : ""}
+            >
+              &larr; ANTERIOR
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-submit-exam"
+              onclick="handleAttemptFinish()"
+            >
+              ENTREGAR EXAMEN
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="handleStepQuestion(1)"
+              ${idx === total - 1 ? "disabled" : ""}
+            >
+              SIGUIENTE &rarr;
+            </button>
+          </div>
+
+          <!-- Navegador Compacto 1..30 -->
+          <nav class="navigator-card" aria-label="Navegador de preguntas">
+            <div class="navigator-header">
+              <span class="navigator-label">Navegador de preguntas (1–${total})</span>
+              <div class="navigator-legend">
+                <span class="legend-item"><i class="legend-dot" style="background:#047857;"></i>Actual</span>
+                <span class="legend-item"><i class="legend-dot" style="background:#d1fae5;border:1px solid #059669;"></i>Contestada</span>
+                <span class="legend-item"><i class="legend-dot" style="background:#ffffff;border:1px solid #cbd5e1;"></i>Pendiente</span>
+              </div>
+            </div>
+            <div class="nav-grid">
+              ${state.questionOrder.map((qBankIndex, visualIdx) => {
+                const qObj = QUESTIONS_BANK[qBankIndex];
+                const isCurrent = visualIdx === idx;
+                const isAnswered = state.answers[qObj.id] !== undefined;
+                let btnClass = "nav-num-btn";
+                if (isCurrent) btnClass += " current";
+                else if (isAnswered) btnClass += " answered";
+
+                return `
+                  <button
+                    type="button"
+                    class="${btnClass}"
+                    onclick="handleJumpQuestion(${visualIdx})"
+                    aria-label="Ir a pregunta ${visualIdx + 1}"
+                  >
+                    ${visualIdx + 1}
+                  </button>
+                `;
+              }).join("")}
+            </div>
+          </nav>
+        </div>
+      `;
+    }
+
+    function handleSelectOption(questionId, optionIndex) {
+      if (state.finished) return;
+      state.answers[questionId] = optionIndex;
+      saveState();
+      renderApp();
+    }
+
+    function handleStepQuestion(delta) {
+      const next = state.currentQuestion + delta;
+      if (next >= 0 && next < state.questionOrder.length) {
+        state.currentQuestion = next;
+        saveState();
+        renderApp();
+      }
+    }
+
+    function handleJumpQuestion(targetIndex) {
+      if (targetIndex >= 0 && targetIndex < state.questionOrder.length) {
+        state.currentQuestion = targetIndex;
+        saveState();
+        renderApp();
+      }
+    }
+
+    function handleAttemptFinish() {
+      if (state.finished || isSubmitting) return;
+
+      const missingNumbers = [];
+      state.questionOrder.forEach((bankIdx, visualIdx) => {
+        const q = QUESTIONS_BANK[bankIdx];
+        if (state.answers[q.id] === undefined) {
+          missingNumbers.push(visualIdx + 1);
+        }
+      });
+
+      if (missingNumbers.length > 0) {
+        const formattedList = formatSpanishList(missingNumbers);
+        showModal({
+          type: "warn",
+          title: "Faltan Preguntas por Contestar",
+          bodyHTML: `No puedes entregar el examen todavía.<br><br><strong>Todavía te faltan:<br>${formattedList}.</strong>`,
+          confirmText: "CONTINUAR EXAMEN"
+        });
+        return;
+      }
+
+      showModal({
+        type: "confirm",
+        title: "Confirmar Entrega",
+        bodyHTML: "Has contestado las 30 preguntas.<br><strong>¿Deseas entregar definitivamente?</strong>",
+        cancelText: "REVISAR",
+        confirmText: "ENTREGAR DEFINITIVAMENTE",
+        onConfirm: function (btnElement) {
+          if (isSubmitting || state.finished) return;
+          isSubmitting = true;
+          if (btnElement) {
+            btnElement.disabled = true;
+            btnElement.textContent = "CALIFICANDO...";
+          }
+          evaluateAndFinishExam();
+        }
+      });
+    }
+
+    /* ==========================================================================
+       FUNCIÓN ÚNICA DE VERIFICACIÓN, CALIFICACIÓN Y GENERACIÓN DE RESULTADOS
+       Se ejecuta una sola vez al confirmar la entrega definitiva.
+       ========================================================================== */
+    function evaluateAndFinishExam() {
+      // 1. Verificar que existan las 30 respuestas
+      const allAnswered = QUESTIONS_BANK.every((q) => state.answers[q.id] !== undefined);
+      if (!allAnswered) {
+        isSubmitting = false;
+        closeActiveModal();
+        return;
+      }
+
+      // 2. Contar aciertos totales y por progresión (5 reactivos por cada progresión)
+      let totalCorrect = 0;
+      const progScores = {
+        P11: 0,
+        P12: 0,
+        P13: 0,
+        P14: 0,
+        P15: 0,
+        P16: 0
+      };
+
+      QUESTIONS_BANK.forEach((q) => {
+        const chosen = state.answers[q.id];
+        if (chosen === q.correct) {
+          totalCorrect += 1;
+          if (Object.prototype.hasOwnProperty.call(progScores, q.prog)) {
+            progScores[q.prog] += 1;
+          }
+        }
+      });
+
+      // 3. Calcular porcentaje entero redondeado
+      const totalQuestions = QUESTIONS_BANK.length; // 30
+      const percentage = Math.round((totalCorrect / totalQuestions) * 100);
+
+      // 4. Determinar nivel de desempeño
+      let performanceLabel = "";
+      if (percentage >= 90) {
+        performanceLabel = "EXCELENTE";
+      } else if (percentage >= 80) {
+        performanceLabel = "MUY BUEN DESEMPEÑO";
+      } else if (percentage >= 70) {
+        performanceLabel = "BUEN DESEMPEÑO";
+      } else if (percentage >= 60) {
+        performanceLabel = "EN PROCESO";
+      } else {
+        performanceLabel = "REQUIERE REFORZAMIENTO";
+      }
+
+      // 5. Identificar fortaleza (Mayor Dominio) y área de repaso (Conviene Repasar), incluyendo empates
+      const progKeys = ["P11", "P12", "P13", "P14", "P15", "P16"];
+      const values = progKeys.map((k) => progScores[k]);
+      const maxVal = Math.max(...values);
+      const minVal = Math.min(...values);
+
+      const highestProgs = progKeys.filter((k) => progScores[k] === maxVal);
+      const lowestProgs = progKeys.filter((k) => progScores[k] === minVal);
+
+      // 6. Registrar fecha y hora locales
+      const now = new Date();
+      const dateStr = now.toLocaleDateString("es-MX", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+      const timeStr = now.toLocaleTimeString("es-MX", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+
+      // 7. Guardar resultado definitivo en estado y persistir
+      state.finished = true;
+      state.results = {
+        score: totalCorrect,
+        total: totalQuestions,
+        percentage: percentage,
+        performance: performanceLabel,
+        progScores: progScores,
+        highestProgs: highestProgs,
+        maxProgScore: maxVal,
+        lowestProgs: lowestProgs,
+        minProgScore: minVal,
+        date: dateStr,
+        time: timeStr
+      };
+
+      saveState();
+      closeActiveModal();
+      renderApp();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       VISTA 3: TARJETA FINAL VERDE ESMERALDA COMPACTA + REVISIÓN DE RESPUESTAS
+       ========================================================================== */
+    function renderResultsView() {
+      const r = state.results;
+      const progOrder = ["P11", "P12", "P13", "P14", "P15", "P16"];
+
+      const highestText = `${r.highestProgs.join(", ")} (${r.maxProgScore}/5)`;
+      const lowestText = `${r.lowestProgs.join(", ")} (${r.minProgScore}/5)`;
+
+      return `
+        <div class="results-wrapper" id="top-results-anchor">
+          <!-- TARJETA PRINCIPAL DE EVIDENCIA (COMPACTA PARA UNA PANTALLA VERTICAL) -->
+          <section class="emerald-evidence-card" aria-label="Comprobante de resultados del examen">
+            <div class="res-header">
+              <span class="res-completed-badge">&#9989; EXAMEN COMPLETADO</span>
+              <h1 class="res-subject-title">LA ENERGÍA EN LOS PROCESOS DE LA VIDA DIARIA</h1>
+              <p class="res-prog-subtitle">PROGRESIONES 11–16</p>
+            </div>
+
+            <!-- Identificación del Estudiante -->
+            <div class="res-student-box">
+              <div class="res-student-row">
+                <span class="res-label">NOMBRE:</span>
+                <span class="res-val">${escapeHTML(state.user.name)}</span>
+              </div>
+              <div class="res-student-row">
+                <span class="res-label">GRUPO:</span>
+                <span class="res-val">${escapeHTML(state.user.group)}</span>
+              </div>
+            </div>
+
+            <!-- Resultado y Porcentaje -->
+            <div class="res-score-panel">
+              <div class="res-score-metrics">
+                <div class="metric-block">
+                  <div class="metric-title">RESULTADO</div>
+                  <div class="metric-number">${r.score} / ${r.total}</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-block">
+                  <div class="metric-title">PORCENTAJE</div>
+                  <div class="metric-number">${r.percentage} %</div>
+                </div>
+              </div>
+              <div>
+                <span class="performance-tag">DESEMPEÑO: ${r.performance}</span>
+              </div>
+            </div>
+
+            <!-- Desglose por Progresión (P11 a P16 sobre 5) -->
+            <div class="prog-breakdown-grid">
+              ${progOrder.map((pKey) => {
+                const pts = r.progScores[pKey];
+                const barWidth = Math.round((pts / 5) * 100);
+                return `
+                  <div class="prog-item">
+                    <div class="prog-item-top">
+                      <span>${pKey}:</span>
+                      <span class="prog-score-num">${pts}/5</span>
+                    </div>
+                    <div class="prog-bar-track">
+                      <div class="prog-bar-fill" style="width: ${barWidth}%;"></div>
+                    </div>
+                  </div>
+                `;
+              }).join("")}
+            </div>
+
+            <!-- Mayor Dominio y Conviene Repasar -->
+            <div class="res-highlights">
+              <div class="highlight-row">
+                &#9989; <span class="highlight-strong">MAYOR DOMINIO:</span> ${highestText}
+              </div>
+              <div class="highlight-row">
+                &#128216; <span class="highlight-strong">CONVIENE REPASAR:</span> ${lowestText}
+              </div>
+            </div>
+
+            <!-- Fecha y Hora -->
+            <div class="res-datetime">
+              <span>FECHA: <strong>${r.date}</strong></span>
+              <span>HORA: <strong>${r.time}</strong></span>
+            </div>
+          </section>
+
+          <!-- Indicación Prominente de Captura -->
+          <div class="screenshot-banner">
+            &#128248; TOMA UNA CAPTURA DE ESTA PANTALLA Y ENVÍALA A TU PROFESOR.
+          </div>
+
+          <!-- Botón para Desplegar/Ocultar Revisión Detallada -->
+          <button
+            type="button"
+            class="btn btn-review-toggle"
+            onclick="handleToggleReview()"
+          >
+            ${reviewExpanded ? "OCULTAR REVISIÓN DE RESPUESTAS" : "REVISAR MIS RESPUESTAS"}
+          </button>
+
+          <!-- Panel de Revisión de los 30 Reactivos -->
+          <section id="detailed-review-box" class="review-section ${reviewExpanded ? "" : "hidden"}">
+            <h2 class="review-heading">Revisión Detallada de Reactivos (1–30)</h2>
+
+            ${state.questionOrder.map((bankIdx, visualIdx) => {
+              const q = QUESTIONS_BANK[bankIdx];
+              const chosenIdx = state.answers[q.id];
+              const isCorrect = chosenIdx === q.correct;
+              const chosenText = chosenIdx !== undefined ? q.options[chosenIdx] : "Sin respuesta";
+              const correctText = q.options[q.correct];
+
+              return `
+                <article class="review-card ${isCorrect ? "is-correct" : "is-wrong"}">
+                  <div class="review-meta">
+                    <span class="${isCorrect ? "status-ok" : "status-bad"}">
+                      ${isCorrect ? "&#9989; CORRECTA" : "&#10060; INCORRECTA"} &bull; Pregunta ${visualIdx + 1}
+                    </span>
+                    <span class="prog-chip">${q.progLabel}</span>
+                  </div>
+                  <p class="review-q-text">${q.text}</p>
+                  <div class="review-detail-box">
+                    <div><strong>Tu respuesta:</strong> ${chosenText}</div>
+                    ${!isCorrect ? `<div><strong>Respuesta correcta:</strong> ${correctText}</div>` : ""}
+                    <div class="review-explanation"><strong>Explicación:</strong> ${q.explanation}</div>
+                  </div>
+                </article>
+              `;
+            }).join("")}
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="handleScrollToResults()"
+            >
+              &uarr; VOLVER A RESULTADOS
+            </button>
+          </section>
+        </div>
+      `;
+    }
+
+    function handleToggleReview() {
+      reviewExpanded = !reviewExpanded;
+      renderApp();
+      if (reviewExpanded) {
+        const revBox = document.getElementById("detailed-review-box");
+        if (revBox) {
+          revBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }
+
+    function handleScrollToResults() {
+      const topAnchor = document.getElementById("top-results-anchor");
+      if (topAnchor) {
+        topAnchor.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       ARRANQUE SEGURO DE LA APLICACIÓN
+       ========================================================================== */
+    window.addEventListener("DOMContentLoaded", function () {
+      loadState();
+      renderApp();
+    });
+  </script>
+</body>
+</html>
